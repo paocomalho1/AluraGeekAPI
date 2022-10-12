@@ -14,3 +14,14 @@ class Produtos(models.Model):
 
     def __str__(self):
         return self.titulo
+
+class Users(models.Model):
+
+    nome = models.CharField(max_length=30)
+    email = models.EmailField(max_length=30, blank=False)
+    senha = models.CharField(max_length=13,blank=False)
+    admin = models.BooleanField(blank=False, null=False, default=False)
+
+    def __str__(self):
+        return self.nome
+
