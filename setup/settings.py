@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "alurageek",
     "django_filters",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -112,3 +113,9 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 django_heroku.settings(locals())
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://alurageek-3njtccm2g-paocomalho1.vercel.app/"
+]
