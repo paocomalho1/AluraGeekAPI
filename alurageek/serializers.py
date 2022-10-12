@@ -20,7 +20,7 @@ class ProdutosPorUsuarioSerializer(serializers.ModelSerializer):
 
     class Meta:         
         model= Produtos
-        fields = ('id','user','titulo','preco','categoria')
+        fields = ('id','user','titulo','preco','categoria','url','descricao')
     
     def get_categoria(self, obj):
         return obj.get_categoria_display()
